@@ -1,0 +1,53 @@
+[
+  {
+    "filename": "closeup-shot-caterpillar-ladybug-green-leaf.jpg",
+    "timestamp": "2025-06-16 15:42:33",
+    "ukuran_asli_kb": 17084.833984375,
+    "ukuran_terenkripsi_kb": 3996.7294921875,
+    "ukuran_hasil_kb": 3996.7216796875,
+    "waktu_persiapan": 0.1921,
+    "waktu_kirim": 8.6484,
+    "waktu_terima": 19.8691,
+    "waktu_dekripsi": 0.0142,
+    "waktu_simpan": 0.0035,
+    "total_waktu_komunikasi": 28.5175,
+    "total_waktu_proses": 0.2098,
+    "kecepatan_upload_kbps": 1975.5,
+    "kecepatan_download_kbps": 201.2,
+    "efisiensi_kompresi": 23.4
+  },
+  {
+    "filename": "insect-8094667_1280.jpg",
+    "timestamp": "2025-06-16 15:43:29",
+    "ukuran_asli_kb": 143.78515625,
+    "ukuran_terenkripsi_kb": 155.986328125,
+    "ukuran_hasil_kb": 155.978515625,
+    "waktu_persiapan": 0.0014,
+    "waktu_kirim": 0.0022,
+    "waktu_terima": 1.3545,
+    "waktu_dekripsi": 0.0012,
+    "waktu_simpan": 0.0011,
+    "total_waktu_komunikasi": 1.3567,
+    "total_waktu_proses": 0.0037,
+    "kecepatan_upload_kbps": 64225.6,
+    "kecepatan_download_kbps": 115.2,
+    "efisiensi_kompresi": 108.5
+  },
+  {
+    "filename": "vertical-selective-focus-shot-grasshopper-green-leaf.jpg",
+    "timestamp": "2025-06-16 15:43:45",
+    "ukuran_asli_kb": 5928.7607421875,
+    "ukuran_terenkripsi_kb": 1836.81640625,
+    "ukuran_hasil_kb": 1836.80859375,
+    "waktu_persiapan": 0.0529,
+    "waktu_kirim": 0.4193,
+    "waktu_terima": 3.2871,
+    "waktu_dekripsi": 0.0127,
+    "waktu_simpan": 0.0024,
+    "total_waktu_komunikasi": 3.7063,
+    "total_waktu_proses": 0.0681,
+    "kecepatan_upload_kbps": 14140.4,
+    "kecepatan_download_kbps": 558.8,
+    "efisiensi_kompresi": 31.0
+  }
+]

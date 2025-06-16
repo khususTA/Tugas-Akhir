@@ -1,0 +1,56 @@
+================================================================================
+INFORMASI SESSION CLIENT
+================================================================================
+IP Client             : 192.168.29.138
+Connected             : 2025-06-16 15:43:18
+Disconnected          : 2025-06-16 15:43:51
+Total Waktu Session   : 33.10 detik
+----------------------------------------
+STATISTIK DETEKSI:
+Jumlah File           : 2
+Jumlah Deteksi        : 1
+Rata-rata Confidence  : 0.509
+Detection Rate        : 50.0%
+----------------------------------------
+PERFORMA CLIENT:
+Rata-rata Dekripsi Client : 0.0069 detik
+Total Dekripsi Client     : 0.0139 detik
+================================================================================
+
+DETAIL TRANSFER & PROCESSING FILE:
+================================================================================================================================================================
+KETERANGAN KOLOM:
+• No      : Nomor urut file
+• Filename: Nama file gambar yang diproses
+• Detection Result: Hasil deteksi hama/penyakit
+• Size Original: Ukuran file asli (KB)
+• Size Encrypted: Ukuran setelah enkripsi (KB)
+• YOLO Time: Waktu proses deteksi YOLO (detik)
+• AES Time: Waktu enkripsi AES (detik)
+• Client Decrypt: Waktu dekripsi di client (detik)
+• Confidence: Tingkat kepercayaan deteksi (0-1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ No | Filename                  | Detection Result     |   Size Ori |   Size Enc |  YOLO Time |  AES Time |  Client Dec | Confidence
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | insect-8094667_1280.jpg   | ganjur               |   143.79 KB |   155.99 KB |    0.985s |   0.016s |     0.001s |    0.509
+  2 | vertical-selective-fo...  | NO_DETECTION         |  5928.76 KB |  1836.82 KB |    0.800s |   0.032s |     0.013s |    0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RINGKASAN STATISTIK PROCESSING:
+================================================================================
+Metric                         | Total           | Average         | Unit      
+--------------------------------------------------------------------------------
+File Size Original             |       6072.55 |       3036.27 | KB        
+File Size Encrypted            |       1992.80 |        996.40 | KB        
+YOLO Detection Time            |         1.785 |         0.893 | seconds   
+AES Encryption Time            |         0.048 |         0.024 | seconds   
+Client Decryption Time         |         0.014 |         0.007 | seconds   
+--------------------------------------------------------------------------------
+
+METRIK EFISIENSI:
+--------------------------------------------------
+Detection Success Rate    : 1/2 (50.0%)
+Average Confidence Score  : 0.509
+Encryption Overhead       : -67.18%
+Total Processing Time     : 1.847 seconds
+

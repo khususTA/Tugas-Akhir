@@ -1,0 +1,9 @@
+timestamp,client_ip,filename,labels,size_ori_kb,size_enc_kb,waktu_deteksi,waktu_enkripsi,confidence,waktu_dekripsi_client
+2025-06-16 14:20:40,192.168.29.138,brown-beetle-sitting-plant-close-up.jpg,walang sangit,9803.66,2604.21,8.27,0.0386,0.628,0.1804
+2025-06-16 14:20:40,192.168.29.138,insect-with-long-antennas-plant.jpg,,9683.87,2753.42,1.0349,0.0449,0.0,0.0169
+2025-06-16 14:20:40,192.168.29.138,vertical-selective-focus-shot-grasshopper-green-leaf.jpg,,5928.76,1836.82,0.8448,0.0366,0.0,0.0048
+2025-06-16 14:20:40,192.168.29.138,closeup-shot-green-grass-hopper-leaf.jpg,,3253.25,1133.93,0.8319,0.0383,0.0,0.0024
+2025-06-16 14:20:40,192.168.29.138,insect-8094667_1280.jpg,ganjur,143.79,155.99,1.0507,0.0155,0.509,0.001
+2025-06-16 15:42:33,192.168.29.138,closeup-shot-caterpillar-ladybug-green-leaf.jpg,,17084.83,3996.73,6.3488,0.0652,0.0,0
+2025-06-16 15:43:51,192.168.29.138,insect-8094667_1280.jpg,ganjur,143.79,155.99,0.9854,0.0161,0.509,0.0012
+2025-06-16 15:43:51,192.168.29.138,vertical-selective-focus-shot-grasshopper-green-leaf.jpg,,5928.76,1836.82,0.8001,0.0316,0.0,0.0127

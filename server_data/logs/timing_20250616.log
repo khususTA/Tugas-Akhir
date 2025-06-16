@@ -1,0 +1,48 @@
+[14:18:54] TIMING ANALYSIS: brown-beetle-sitting-plant-close-up.jpg
+  - YOLO Detection: 8.270s
+  - AES Encryption: 0.039s
+  - Client Decrypt: 0.180s
+  - Total Process:  8.489s
+--------------------------------------------------
+[14:19:40] TIMING ANALYSIS: insect-with-long-antennas-plant.jpg
+  - YOLO Detection: 1.035s
+  - AES Encryption: 0.045s
+  - Client Decrypt: 0.017s
+  - Total Process:  1.097s
+--------------------------------------------------
+[14:19:53] TIMING ANALYSIS: vertical-selective-focus-shot-grasshopper-green-leaf.jpg
+  - YOLO Detection: 0.845s
+  - AES Encryption: 0.037s
+  - Client Decrypt: 0.005s
+  - Total Process:  0.886s
+--------------------------------------------------
+[14:20:06] TIMING ANALYSIS: closeup-shot-green-grass-hopper-leaf.jpg
+  - YOLO Detection: 0.832s
+  - AES Encryption: 0.038s
+  - Client Decrypt: 0.002s
+  - Total Process:  0.873s
+--------------------------------------------------
+[14:20:26] TIMING ANALYSIS: insect-8094667_1280.jpg
+  - YOLO Detection: 1.051s
+  - AES Encryption: 0.015s
+  - Client Decrypt: 0.001s
+  - Total Process:  1.067s
+--------------------------------------------------
+[15:42:30] TIMING ANALYSIS: closeup-shot-caterpillar-ladybug-green-leaf.jpg
+  - YOLO Detection: 6.349s
+  - AES Encryption: 0.065s
+  - Client Decrypt: 0.000s
+  - Total Process:  6.414s
+--------------------------------------------------
+[15:43:29] TIMING ANALYSIS: insect-8094667_1280.jpg
+  - YOLO Detection: 0.985s
+  - AES Encryption: 0.016s
+  - Client Decrypt: 0.001s
+  - Total Process:  1.003s
+--------------------------------------------------
+[15:43:45] TIMING ANALYSIS: vertical-selective-focus-shot-grasshopper-green-leaf.jpg
+  - YOLO Detection: 0.800s
+  - AES Encryption: 0.032s
+  - Client Decrypt: 0.013s
+  - Total Process:  0.844s
+--------------------------------------------------

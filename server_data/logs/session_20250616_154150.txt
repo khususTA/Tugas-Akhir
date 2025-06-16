@@ -1,0 +1,50 @@
+================================================================================
+INFORMASI SESSION CLIENT
+================================================================================
+IP Client             : 192.168.29.138
+Connected             : 2025-06-16 15:41:50
+Disconnected          : 2025-06-16 15:42:33
+Total Waktu Session   : 43.42 detik
+----------------------------------------
+STATISTIK DETEKSI:
+Jumlah File           : 1
+Jumlah Deteksi        : 0
+Rata-rata Confidence  : 0.000
+Detection Rate        : 0.0%
+================================================================================
+
+DETAIL TRANSFER & PROCESSING FILE:
+================================================================================================================================================================
+KETERANGAN KOLOM:
+• No      : Nomor urut file
+• Filename: Nama file gambar yang diproses
+• Detection Result: Hasil deteksi hama/penyakit
+• Size Original: Ukuran file asli (KB)
+• Size Encrypted: Ukuran setelah enkripsi (KB)
+• YOLO Time: Waktu proses deteksi YOLO (detik)
+• AES Time: Waktu enkripsi AES (detik)
+• Client Decrypt: Waktu dekripsi di client (detik)
+• Confidence: Tingkat kepercayaan deteksi (0-1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ No | Filename                  | Detection Result     |   Size Ori |   Size Enc |  YOLO Time |  AES Time |  Client Dec | Confidence
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | closeup-shot-caterpil...  | NO_DETECTION         | 17084.83 KB |  3996.73 KB |    6.349s |   0.065s |     0.000s |    0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RINGKASAN STATISTIK PROCESSING:
+================================================================================
+Metric                         | Total           | Average         | Unit      
+--------------------------------------------------------------------------------
+File Size Original             |      17084.83 |      17084.83 | KB        
+File Size Encrypted            |       3996.73 |       3996.73 | KB        
+YOLO Detection Time            |         6.349 |         6.349 | seconds   
+AES Encryption Time            |         0.065 |         0.065 | seconds   
+--------------------------------------------------------------------------------
+
+METRIK EFISIENSI:
+--------------------------------------------------
+Detection Success Rate    : 0/1 (0.0%)
+Average Confidence Score  : 0.000
+Encryption Overhead       : -76.61%
+Total Processing Time     : 6.414 seconds
+

@@ -1,0 +1,59 @@
+================================================================================
+INFORMASI SESSION CLIENT
+================================================================================
+IP Client             : 192.168.29.138
+Connected             : 2025-06-16 14:18:04
+Disconnected          : 2025-06-16 14:20:40
+Total Waktu Session   : 156.10 detik
+----------------------------------------
+STATISTIK DETEKSI:
+Jumlah File           : 5
+Jumlah Deteksi        : 2
+Rata-rata Confidence  : 0.569
+Detection Rate        : 40.0%
+----------------------------------------
+PERFORMA CLIENT:
+Rata-rata Dekripsi Client : 0.0411 detik
+Total Dekripsi Client     : 0.2055 detik
+================================================================================
+
+DETAIL TRANSFER & PROCESSING FILE:
+================================================================================================================================================================
+KETERANGAN KOLOM:
+• No      : Nomor urut file
+• Filename: Nama file gambar yang diproses
+• Detection Result: Hasil deteksi hama/penyakit
+• Size Original: Ukuran file asli (KB)
+• Size Encrypted: Ukuran setelah enkripsi (KB)
+• YOLO Time: Waktu proses deteksi YOLO (detik)
+• AES Time: Waktu enkripsi AES (detik)
+• Client Decrypt: Waktu dekripsi di client (detik)
+• Confidence: Tingkat kepercayaan deteksi (0-1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ No | Filename                  | Detection Result     |   Size Ori |   Size Enc |  YOLO Time |  AES Time |  Client Dec | Confidence
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | brown-beetle-sitting-...  | walang sangit        |  9803.66 KB |  2604.21 KB |    8.270s |   0.039s |     0.180s |    0.628
+  2 | insect-with-long-ante...  | NO_DETECTION         |  9683.87 KB |  2753.42 KB |    1.035s |   0.045s |     0.017s |    0.000
+  3 | vertical-selective-fo...  | NO_DETECTION         |  5928.76 KB |  1836.82 KB |    0.845s |   0.037s |     0.005s |    0.000
+  4 | closeup-shot-green-gr...  | NO_DETECTION         |  3253.25 KB |  1133.93 KB |    0.832s |   0.038s |     0.002s |    0.000
+  5 | insect-8094667_1280.jpg   | ganjur               |   143.79 KB |   155.99 KB |    1.051s |   0.015s |     0.001s |    0.509
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RINGKASAN STATISTIK PROCESSING:
+================================================================================
+Metric                         | Total           | Average         | Unit      
+--------------------------------------------------------------------------------
+File Size Original             |      28813.32 |       5762.66 | KB        
+File Size Encrypted            |       8484.37 |       1696.87 | KB        
+YOLO Detection Time            |        12.032 |         2.406 | seconds   
+AES Encryption Time            |         0.174 |         0.035 | seconds   
+Client Decryption Time         |         0.206 |         0.041 | seconds   
+--------------------------------------------------------------------------------
+
+METRIK EFISIENSI:
+--------------------------------------------------
+Detection Success Rate    : 2/5 (40.0%)
+Average Confidence Score  : 0.569
+Encryption Overhead       : -70.55%
+Total Processing Time     : 12.411 seconds
+

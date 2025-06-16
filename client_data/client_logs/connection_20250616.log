@@ -1,0 +1,41 @@
+[2025-06-16 13:47:12] KONEKSI FAILED
+  Server: 192.168.100.84:12345
+  Waktu Koneksi: 0s
+  Waktu Auth: 0s
+  Error: Gagal koneksi: [WinError 10051] A socket operation was attempted to an unreachable network
+--------------------------------------------------
+[2025-06-16 14:18:04] KONEKSI SUCCESS
+  Server: 192.168.29.138:12345
+  Waktu Koneksi: 0.0003s
+  Waktu Auth: 0.0016s
+--------------------------------------------------
+[2025-06-16 14:20:40] DISCONNECTED
+--------------------------------------------------
+[2025-06-16T15:41:50.658724] CONNECTION SUCCESS
+Server: 192.168.29.138:12345
+Connection: 0.0076s, Auth: 0.1689s, Total: 0.1765s
+Quality: FAST
+--------------------------------------------------
+[2025-06-16 15:43:12] SESSION ENDED
+Duration: 0:01:34
+Operations: 1
+------------------------------
+[2025-06-16T15:43:18.759139] CONNECTION SUCCESS
+Server: 192.168.29.138:12345
+Connection: 0.0006s, Auth: 0.001s, Total: 0.0016s
+Quality: FAST
+--------------------------------------------------
+[2025-06-16 15:43:51] SESSION ENDED
+Duration: 0:02:13
+Operations: 3
+------------------------------
+[2025-06-16T16:13:30.938437] CONNECTION SUCCESS
+Server: 192.168.29.138:12345
+Connection: 0.0005s, Auth: 0.043s, Total: 0.0435s
+Quality: FAST
+--------------------------------------------------
+[2025-06-16T16:18:02.277881] CONNECTION SUCCESS
+Server: 192.168.29.138:12345
+Connection: 0.0007s, Auth: 0.001s, Total: 0.0017s
+Quality: FAST
+--------------------------------------------------
