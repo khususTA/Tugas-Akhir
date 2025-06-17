@@ -115,7 +115,7 @@ echo "Upgrading pip..."
 python -m pip install --upgrade pip
 
 echo "Installing dependencies..."
-python -m pip install -r requirements.txt
+python -m pip install -r jagapadi_requirements.txt
 
 echo "Creating directories..."
 python install.py --skip-tests
