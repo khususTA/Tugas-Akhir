@@ -1,0 +1,42 @@
+[03:59:33] TIMING ANALYSIS: IMG_20240908_055032_450.jpg
+  - YOLO Detection: 8.046s
+  - AES Encryption: 0.059s
+  - Client Decrypt: 0.013s
+  - Total Process:  8.119s
+--------------------------------------------------
+[03:59:51] TIMING ANALYSIS: IMG_20240908_070147_365.jpg
+  - YOLO Detection: 1.001s
+  - AES Encryption: 0.038s
+  - Client Decrypt: 0.014s
+  - Total Process:  1.053s
+--------------------------------------------------
+[04:00:05] TIMING ANALYSIS: IMG_20240908_060003.jpg
+  - YOLO Detection: 1.134s
+  - AES Encryption: 0.035s
+  - Client Decrypt: 0.019s
+  - Total Process:  1.188s
+--------------------------------------------------
+[04:00:23] TIMING ANALYSIS: IMG_20240908_065721_554.jpg
+  - YOLO Detection: 1.129s
+  - AES Encryption: 0.047s
+  - Client Decrypt: 0.010s
+  - Total Process:  1.186s
+--------------------------------------------------
+[05:17:37] TIMING ANALYSIS: camera_capture_2025-06-16T22-17-24-726Z.jpg
+  - YOLO Detection: 9.213s
+  - AES Encryption: 0.756s
+  - Client Decrypt: 0.002s
+  - Total Process:  9.971s
+--------------------------------------------------
+[05:18:18] TIMING ANALYSIS: IMG_20240908_070147_365.jpg
+  - YOLO Detection: 1.130s
+  - AES Encryption: 0.043s
+  - Client Decrypt: 0.017s
+  - Total Process:  1.190s
+--------------------------------------------------
+[05:18:43] TIMING ANALYSIS: IMG_20240908_063321.jpg
+  - YOLO Detection: 5.900s
+  - AES Encryption: 0.050s
+  - Client Decrypt: 0.013s
+  - Total Process:  5.963s
+--------------------------------------------------

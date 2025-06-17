@@ -1,0 +1,24 @@
+[2025-06-17 04:00:30] SYSTEM ERROR
+  Client IP    : 192.168.29.138
+  Error Context: Data receive
+  Error Message: Invalid data size
+  Severity     : MEDIUM
+------------------------------------------------------------
+[2025-06-17 04:01:17] SYSTEM ERROR
+  Client IP    : 192.168.29.138
+  Error Context: Data receive
+  Error Message: No header data
+  Severity     : MEDIUM
+------------------------------------------------------------
+[2025-06-17 04:07:34] SYSTEM ERROR
+  Client IP    : 192.168.29.138
+  Error Context: Data receive
+  Error Message: Invalid data size
+  Severity     : MEDIUM
+------------------------------------------------------------
+[2025-06-17 05:18:55] SYSTEM ERROR
+  Client IP    : 192.168.29.138
+  Error Context: Data receive
+  Error Message: Invalid data size
+  Severity     : MEDIUM
+------------------------------------------------------------

@@ -1,0 +1,14 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.log
+*.clip
+*.jpg
+*.jpeg
+*.png
+client_data/client_logs/
+client_data/hasil_dekripsi/
+server_data/clipper_file/
+server_data/hasil_identifikasi/
+server_data/logs/
+server_data/original_images/

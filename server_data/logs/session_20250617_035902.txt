@@ -1,0 +1,58 @@
+================================================================================
+INFORMASI SESSION CLIENT
+================================================================================
+IP Client             : 192.168.29.138
+Connected             : 2025-06-17 03:59:02
+Disconnected          : 2025-06-17 04:00:30
+Total Waktu Session   : 88.07 detik
+----------------------------------------
+STATISTIK DETEKSI:
+Jumlah File           : 4
+Jumlah Deteksi        : 2
+Rata-rata Confidence  : 0.867
+Detection Rate        : 50.0%
+----------------------------------------
+PERFORMA CLIENT:
+Rata-rata Dekripsi Client : 0.0141 detik
+Total Dekripsi Client     : 0.0565 detik
+================================================================================
+
+DETAIL TRANSFER & PROCESSING FILE:
+================================================================================================================================================================
+KETERANGAN KOLOM:
+• No      : Nomor urut file
+• Filename: Nama file gambar yang diproses
+• Detection Result: Hasil deteksi hama/penyakit
+• Size Original: Ukuran file asli (KB)
+• Size Encrypted: Ukuran setelah enkripsi (KB)
+• YOLO Time: Waktu proses deteksi YOLO (detik)
+• AES Time: Waktu enkripsi AES (detik)
+• Client Decrypt: Waktu dekripsi di client (detik)
+• Confidence: Tingkat kepercayaan deteksi (0-1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ No | Filename                  | Detection Result     |   Size Ori |   Size Enc |  YOLO Time |  AES Time |  Client Dec | Confidence
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | IMG_20240908_055032_4...  | keong mas            |  5138.31 KB |  3194.19 KB |    8.046s |   0.059s |     0.013s |    0.797
+  2 | IMG_20240908_070147_3...  | NO_DETECTION         |  4704.29 KB |  2596.51 KB |    1.001s |   0.038s |     0.014s |    0.000
+  3 | IMG_20240908_060003.jpg   | lalat bibit          |  2404.95 KB |  1559.48 KB |    1.134s |   0.035s |     0.019s |    0.936
+  4 | IMG_20240908_065721_5...  | NO_DETECTION         |  4956.39 KB |  2730.32 KB |    1.129s |   0.047s |     0.010s |    0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RINGKASAN STATISTIK PROCESSING:
+================================================================================
+Metric                         | Total           | Average         | Unit      
+--------------------------------------------------------------------------------
+File Size Original             |      17203.93 |       4300.98 | KB        
+File Size Encrypted            |      10080.49 |       2520.12 | KB        
+YOLO Detection Time            |        11.310 |         2.828 | seconds   
+AES Encryption Time            |         0.179 |         0.045 | seconds   
+Client Decryption Time         |         0.056 |         0.014 | seconds   
+--------------------------------------------------------------------------------
+
+METRIK EFISIENSI:
+--------------------------------------------------
+Detection Success Rate    : 2/4 (50.0%)
+Average Confidence Score  : 0.867
+Encryption Overhead       : -41.41%
+Total Processing Time     : 11.545 seconds
+

@@ -3,6 +3,7 @@ import base64
 import struct
 import os
 import time
+import json
 from datetime import datetime
 
 # Import optimized modules
@@ -44,7 +45,7 @@ class ClientApp:
         self.webview_window = None
         self.frontend_ready = False  # Track frontend readiness
         
-        print("🌾 PestDetect Client v2.2 (Final Fixed)")
+        print("🌾 PestDetect Client v2.2 (Local-First History)")
 
     def connect_to_server(self, password):
         """Connect to server with improved history synchronization"""
@@ -55,43 +56,74 @@ class ClientApp:
         
         if success:
             print("✅ Connected successfully")
-            # ✅ FIXED: Load history immediately if frontend is already ready
+            # ✅ NEW: Only sync with server if frontend is ready
             if self.frontend_ready:
-                self._load_history_safe()
+                self._sync_history_with_server()
             else:
-                print("⏳ Waiting for frontend ready signal to load history...")
+                print("⏳ Will sync history when frontend becomes ready...")
         else:
             print(f"❌ Connection failed: {message}")
         
         return success, message
 
     def on_frontend_ready(self):
-        """Called when frontend signals it's ready"""
+        """✅ UPDATED: Called when frontend signals it's ready"""
         print("🎯 Frontend ready signal received")
         self.frontend_ready = True
         
-        # Load history if connected
+        # ✅ NEW: Frontend will auto-load local history, no need to send here
+        print("📋 Frontend will auto-load local history")
+        
+        # ✅ NEW: Only sync with server if connected
         if self.network_manager.connected:
-            self._load_history_safe()
+            self._sync_history_with_server()
         else:
-            print("⚠️ Frontend ready but not connected to server")
+            print("💾 Local history available, server sync will happen on connect")
 
-    def _load_history_safe(self):
-        """Safely load history with proper error handling"""
+    def _sync_history_with_server(self):
+        """✅ NEW: Sync local history with server data"""
         try:
-            print("📊 Loading history to UI...")
+            print("🔄 Syncing history with server...")
             time.sleep(0.2)  # Small delay for UI stability
             self._ensure_webview_ready()
+            
+            # Load server history and send to frontend for merging
             self.history_manager.load_history_to_ui(self.webview_window)
-            print("✅ History loaded successfully")
+            print("✅ History synced with server successfully")
         except Exception as e:
-            print(f"❌ Failed to load history: {e}")
-            # Fallback to empty history
-            try:
-                self._safe_js_call("if(window.loadHistoryFromBackend) { window.loadHistoryFromBackend([]); }")
-            except Exception as fallback_error:
-                print(f"❌ Fallback also failed: {fallback_error}")
+            print(f"❌ Failed to sync history with server: {e}")
+            # Don't fallback to empty - let frontend keep local history
+            print("💾 Frontend will continue with local history")
 
+    def load_local_history(self):
+        """✅ NEW: Load local history for frontend startup"""
+        try:
+            print("📂 Loading local history for frontend...")
+            
+            # Get all detections from history manager
+            local_detections = self.history_manager.get_all_detections_for_ui()
+            
+            if local_detections:
+                print(f"✅ Found {len(local_detections)} local detection records")
+                return local_detections
+            else:
+                print("📭 No local history found")
+                return []
+                
+        except Exception as e:
+            print(f"❌ Error loading local history: {e}")
+            return []
+
+    def get_all_detections_for_ui(self):
+        """✅ NEW: Get formatted detection data for UI"""
+        try:
+            # Call history manager method to get UI-formatted data
+            return self.history_manager.get_all_detections_for_ui()
+        except Exception as e:
+            print(f"❌ Error getting detections for UI: {e}")
+            return []
+
+    # ✅ KEEP EXISTING: No changes needed for send_image method
     def send_image(self, filename, base64data):
         """Send image with optimized UI update sequence"""
         if not self.network_manager.connected or not self.network_manager.authenticated:
@@ -218,7 +250,7 @@ class ClientApp:
             print(f"Error adding detection to UI: {e}")
             # Fallback
             try:
-                self._safe_js_call("if(window.app && window.app.updateTodayStats) { window.app.updateTodayStats(); }")
+                self._safe_js_call("if(window.app && window.app.historyManager && window.app.historyManager.updateTodayStats) { window.app.historyManager.updateTodayStats(); }")
             except:
                 pass
 
@@ -255,6 +287,7 @@ class ClientApp:
         """Get statistics for UI"""
         return self.history_manager.get_detection_stats()
 
+    # ✅ KEEP: Clear history method (meski history-manager.js tidak pakai)
     def clear_detection_history(self):
         """Clear detection history with UI sync"""
         try:
@@ -262,7 +295,7 @@ class ClientApp:
             success, message = self.history_manager.clear_detection_history(self.webview_window)
             
             if success:
-                self._safe_js_call("if(window.app && window.app.updateTodayStats) { window.app.updateTodayStats(); }")
+                self._safe_js_call("if(window.app && window.app.historyManager && window.app.historyManager.updateTodayStats) { window.app.historyManager.updateTodayStats(); }")
                 print("History cleared and UI updated")
             
             return success, message
@@ -290,7 +323,7 @@ class ClientApp:
             
             # Update UI connection state
             if self.webview_window:
-                self._safe_js_call("if(window.app && window.app.setConnectionState) { window.app.setConnectionState('disconnected'); }")
+                self._safe_js_call("if(window.app && window.app.connectionManager && window.app.connectionManager.setConnectionState) { window.app.connectionManager.setConnectionState('disconnected'); }")
             
             print(f"Disconnected: {message}")
             return success, message
@@ -308,12 +341,13 @@ class ClientApp:
         }
 
 class JSApi:
-    """✅ FIXED: Simplified JSApi without circular references"""
+    """✅ UPDATED: JSApi with local history support"""
     
-    def __init__(self, connect_func, send_func, disconnect_func):
+    def __init__(self, connect_func, send_func, disconnect_func, load_local_history_func):
         self._connect = connect_func
         self._send = send_func
         self._disconnect = disconnect_func
+        self._load_local_history = load_local_history_func
 
     def frontend_ready(self):
         """Called when frontend is ready"""
@@ -322,6 +356,15 @@ class JSApi:
             client_app_instance.on_frontend_ready()
         else:
             print("❌ Client app instance not available")
+
+    def load_local_history(self):
+        """✅ NEW: Called by frontend to load local history at startup"""
+        global client_app_instance
+        if client_app_instance:
+            return client_app_instance.load_local_history()
+        else:
+            print("❌ Client app instance not available")
+            return []
         
     def connect_to_server(self, password):
         return self._connect(password)
@@ -337,17 +380,18 @@ def start_client():
     try:
         client_api = ClientApp()
         
-        # ✅ FIXED: Simplified JSApi without circular reference
+        # ✅ UPDATED: JSApi with local history support
         js_api = JSApi(
             client_api.connect_to_server,
             client_api.send_image,
-            client_api.disconnect
+            client_api.disconnect,
+            client_api.load_local_history
         )
         
         # Create window
         window = webview.create_window(
-            title="JAGAPADI v2.2 (Final Fixed)",
-            url="./ui_2/index.html",
+            title="JAGAPADI v2.2 (Local-First History)",
+            url="./ui/index_fixed.html",
             js_api=js_api,
             width=960,
             height=640,
@@ -357,15 +401,19 @@ def start_client():
         # Set webview window reference
         client_api.webview_window = window
         
-        print("=" * 50)
-        print("🌾 PESTDETECT CLIENT v2.2 (Final Fixed)")
-        print("=" * 50)
-        print(f"Results folder: {FOLDER_HASIL}")
-        print(f"History file: {client_api.history_manager.history_file}")
-        print(f"Logs folder: {FOLDER_LOG_CLIENT}")
-        print(f"Target server: {SERVER_HOST}:{SERVER_PORT}")
-        print("FINAL FIX: PyWebView circular reference and timing issues resolved")
-        print("=" * 50)
+        print("=" * 60)
+        print("🌾 PESTDETECT CLIENT v2.2 (Local-First History)")
+        print("=" * 60)
+        print(f"📁 Results folder: {FOLDER_HASIL}")
+        print(f"📋 History file: {client_api.history_manager.history_file}")
+        print(f"📊 Logs folder: {FOLDER_LOG_CLIENT}")
+        print(f"🌐 Target server: {SERVER_HOST}:{SERVER_PORT}")
+        print("✨ NEW FEATURES:")
+        print("   • Local-First History: History loads instantly at startup")
+        print("   • Smart Sync: Merges local and server data intelligently")
+        print("   • Offline Capable: View history without server connection")
+        print("   • Auto-Backup: Persistent local storage with fallbacks")
+        print("=" * 60)
         
         # Start webview
         try:

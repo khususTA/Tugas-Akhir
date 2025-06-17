@@ -1,0 +1,57 @@
+================================================================================
+INFORMASI SESSION CLIENT
+================================================================================
+IP Client             : 192.168.29.138
+Connected             : 2025-06-17 05:17:08
+Disconnected          : 2025-06-17 05:18:55
+Total Waktu Session   : 107.36 detik
+----------------------------------------
+STATISTIK DETEKSI:
+Jumlah File           : 3
+Jumlah Deteksi        : 1
+Rata-rata Confidence  : 0.729
+Detection Rate        : 33.3%
+----------------------------------------
+PERFORMA CLIENT:
+Rata-rata Dekripsi Client : 0.0106 detik
+Total Dekripsi Client     : 0.0318 detik
+================================================================================
+
+DETAIL TRANSFER & PROCESSING FILE:
+================================================================================================================================================================
+KETERANGAN KOLOM:
+• No      : Nomor urut file
+• Filename: Nama file gambar yang diproses
+• Detection Result: Hasil deteksi hama/penyakit
+• Size Original: Ukuran file asli (KB)
+• Size Encrypted: Ukuran setelah enkripsi (KB)
+• YOLO Time: Waktu proses deteksi YOLO (detik)
+• AES Time: Waktu enkripsi AES (detik)
+• Client Decrypt: Waktu dekripsi di client (detik)
+• Confidence: Tingkat kepercayaan deteksi (0-1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ No | Filename                  | Detection Result     |   Size Ori |   Size Enc |  YOLO Time |  AES Time |  Client Dec | Confidence
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | camera_capture_2025-0...  | NO_DETECTION         |    71.52 KB |    75.47 KB |    9.213s |   0.756s |     0.002s |    0.000
+  2 | IMG_20240908_070147_3...  | NO_DETECTION         |  4704.29 KB |  2596.51 KB |    1.130s |   0.043s |     0.017s |    0.000
+  3 | IMG_20240908_063321.jpg   | hawar daun, wala...  |  3648.80 KB |  1853.20 KB |    5.900s |   0.050s |     0.013s |    0.729
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RINGKASAN STATISTIK PROCESSING:
+================================================================================
+Metric                         | Total           | Average         | Unit      
+--------------------------------------------------------------------------------
+File Size Original             |       8424.62 |       2808.21 | KB        
+File Size Encrypted            |       4525.18 |       1508.39 | KB        
+YOLO Detection Time            |        16.242 |         5.414 | seconds   
+AES Encryption Time            |         0.850 |         0.283 | seconds   
+Client Decryption Time         |         0.032 |         0.011 | seconds   
+--------------------------------------------------------------------------------
+
+METRIK EFISIENSI:
+--------------------------------------------------
+Detection Success Rate    : 1/3 (33.3%)
+Average Confidence Score  : 0.729
+Encryption Overhead       : -46.29%
+Total Processing Time     : 17.124 seconds
+
