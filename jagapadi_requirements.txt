@@ -1,0 +1,48 @@
+# JAGAPADI v2.2 - AI Deteksi Hama Padi
+# Python Requirements File
+
+# ===== CORE DEPENDENCIES =====
+# GUI Framework untuk Desktop Client
+pywebview>=4.4.1
+
+# Cryptography untuk AES Encryption/Decryption
+pycryptodome>=3.19.0
+
+# ===== AI/ML DEPENDENCIES =====
+# YOLO Object Detection
+ultralytics>=8.0.196
+
+# Image Processing
+Pillow>=10.0.1
+opencv-python>=4.8.1.78
+
+# Deep Learning Framework
+torch>=2.0.1
+torchvision>=0.15.2
+
+# Scientific Computing
+numpy>=1.24.3
+
+# ===== OPTIONAL DEPENDENCIES =====
+# Performance optimization (opsional)
+# opencv-contrib-python>=4.8.1.78  # Extended OpenCV features
+
+# GPU Support (uncomment jika menggunakan CUDA)
+# torch-audio>=2.0.1  # Audio processing
+# torchaudio>=2.0.1   # Audio processing
+
+# ===== DEVELOPMENT DEPENDENCIES (Optional) =====
+# Uncomment untuk development
+# pytest>=7.4.2        # Testing framework
+# black>=23.7.0         # Code formatting
+# flake8>=6.0.0         # Code linting
+# jupyter>=1.0.0        # Notebook development
+
+# ===== SYSTEM-SPECIFIC NOTES =====
+# Windows: Pastikan Microsoft Visual C++ 14.0+ terinstall
+# Linux: Pastikan libgl1-mesa-glx terinstall (apt install libgl1-mesa-glx)
+# macOS: Tidak ada requirement tambahan khusus
+
+# ===== VERSION COMPATIBILITY =====
+# Python 3.8+ required
+# Tested on Python 3.8, 3.9, 3.10, 3.11
